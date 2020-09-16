@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Welcome!";
+}
+
+<div class="text-center">
+    <h1 class="display-9">Welcome</h1>
+
+</div>
+
+
+
+
+<body>
+
+    <div>
+        <input id="SaveFile" type="file"
+               multiple name="SaveFile" value="SaveFile" title="保存">
+
+    </div>
+
+    <div>
+        <img src="/UserFile/image/空.png" width="512" height="256" alt="画像">
+    </div>
+
+    <audio audio id="musicID" controls autoplay loop>
+        @*<source src="~/UserFile/sound/アナザーエゴ.mp3" type="audio/ogg" />*@
+        <source src="~/UserFile/sound/アナザーエゴ.mp3" type="audio/mpeg" />
+
+    </audio>
+
+    <div>
+        <button type="button" onclick="fadein()">フェードイン</button>
+        <button type="button" onclick="fadeout()">フェードアウト</button>
+    </div>
+
+
+</body>
+
+
+<img src="~/lib/file/megumin.png" />
+<script src="~/js/app.js"></script>
+
+
+
+<script>
+    //mediaオブジェクトの取得
+    var media = document.getElementById("musicID");
+
+    //フェードイン関数
+    function fadein() {
+        var vl = media.volume;
+        if (vl < 0.4) {
+            media.volume = Math.ceil((vl + 0.1) * 10) / 10;
+            setTimeout("fadein()", 200);
+        }
+    }
+
+    //フェードアウト関数 
+    function fadeout() {
+        var vl = media.volume;
+        if (vl > 0) {
+            media.volume = Math.floor((vl - 0.01) * 10) / 10;
+            setTimeout("fadeout()", 500);
+        }
+    }
+
+    /* audio・video 音量初期値の設定 */
+    const mediasVol_def = function () {
+
+        //audioの数だけ全部音量0.5(=50%)
+        const audios = document.getElementsByTagName('audio');
+        for (let n = 0; audios.length > n; n++) { audios[n].volume = 0.3; }
+
+        //videoの数だけ全部音量0.5(=50%)
+        const videos = document.getElementsByTagName('video');
+        for (let n = 0; videos.length > 0; n++) { videos[n].volume = 0.3; }
+
+    }
+    /* ページ読み込み時に処理 */
+    window.addEventListener('DOMContentLoaded', function () {
+        mediasVol_def();
+    }, false); 
+
+</script>

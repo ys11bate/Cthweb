@@ -12,7 +12,7 @@
 
 <body>
 
-    <div>
+    @*<div>
         <input id="SaveFile" type="file"
                multiple name="SaveFile" value="SaveFile" title="保存">
 
@@ -20,7 +20,8 @@
 
     <div>
         <img src="/UserFile/image/空.png" width="512" height="256" alt="画像">
-    </div>
+    </div>*@
+
 
     <audio audio id="musicID" controls autoplay loop>
         @*<source src="~/UserFile/sound/アナザーエゴ.mp3" type="audio/ogg" />*@
@@ -33,13 +34,41 @@
         <button type="button" onclick="fadeout()">フェードアウト</button>
     </div>
 
+    <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-2">User</div>
+            <div class="col-4"><input type="text" id="userInput" /></div>
+        </div>
+        <div class="row">
+            <div class="col-2">Message</div>
+            <div class="col-4"><input type="text" id="messageInput" /></div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-6">
+                <input type="button" id="sendButton" value="Send Message" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+
 
 </body>
 
 
-<img src="~/lib/file/megumin.png" />
 <script src="~/js/app.js"></script>
-
+<script src="~/js/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
 
 
 <script>
@@ -55,7 +84,7 @@
         }
     }
 
-    //フェードアウト関数 
+    //フェードアウト関数
     function fadeout() {
         var vl = media.volume;
         if (vl > 0) {
@@ -79,6 +108,6 @@
     /* ページ読み込み時に処理 */
     window.addEventListener('DOMContentLoaded', function () {
         mediasVol_def();
-    }, false); 
+    }, false);
 
 </script>

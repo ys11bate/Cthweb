@@ -12,6 +12,8 @@ using Cthweb.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SignalRChat.Hubs;
+
 
 namespace Cthweb
 {
@@ -44,6 +46,9 @@ namespace Cthweb
                 options.ClientSecret = googleAuthNSection["ClientSecret"];
             });
 
+
+            services.AddSignalR();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,6 +79,7 @@ namespace Cthweb
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapHub<ChatHub>("/chathub");
             });
         }
     }

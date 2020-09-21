@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ys11\\Desktop\\Cthweb\\Cthweb\\Cthweb.csproj": {}
+    "C:\\Users\\ys11\\Desktop\\新しいフォルダー\\Cthweb\\Cthweb\\Cthweb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ys11\\Desktop\\Cthweb\\Cthweb\\Cthweb.csproj": {
+    "C:\\Users\\ys11\\Desktop\\新しいフォルダー\\Cthweb\\Cthweb\\Cthweb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ys11\\Desktop\\Cthweb\\Cthweb\\Cthweb.csproj",
+        "projectUniqueName": "C:\\Users\\ys11\\Desktop\\新しいフォルダー\\Cthweb\\Cthweb\\Cthweb.csproj",
         "projectName": "Cthweb",
-        "projectPath": "C:\\Users\\ys11\\Desktop\\Cthweb\\Cthweb\\Cthweb.csproj",
+        "projectPath": "C:\\Users\\ys11\\Desktop\\新しいフォルダー\\Cthweb\\Cthweb\\Cthweb.csproj",
         "packagesPath": "C:\\Users\\ys11\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ys11\\Desktop\\Cthweb\\Cthweb\\obj\\",
+        "outputPath": "C:\\Users\\ys11\\Desktop\\新しいフォルダー\\Cthweb\\Cthweb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ys11\\AppData\\Roaming\\NuGet\\NuGet.Config",
